@@ -10,4 +10,9 @@ urlpatterns = [
         views.TripDetailView.as_view(),
         name="trip-detail",
     ),
+    path("dashboard/note/", views.NoteListView.as_view(), name="note-list"),
+    path("dashboard/note/create/", views.NoteCreateView.as_view(), name="note-create"),
+    path(
+        "dashboard/note/<str:pk>/", views.NoteDetailView.as_view(), name="note-detail"
+    ),
 ]

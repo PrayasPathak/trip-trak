@@ -6,7 +6,7 @@
   <h3 class="text-xl pb-4">Notes:</h3>
   <div class="flex gap-2 flex-wrap">
     {% for note in notes %}
-    <a href="#">
+    <a href="{%url 'note-detail' note.id%}">
       <div class="border-2 rounded-lg pb-4 hover:shadow">
         <img
           class="w-48 h-32 object-cover overflow-hidden rounded-t-md"
@@ -18,7 +18,7 @@
       </div>
     </a>
     {% endfor %}
-    <a href="#">
+    <a href="{%url 'note-create'%}">
       <div
         class="border-2 border-dashed rounded-lg hover:shadow w-48 h-48 flex justify-center items-center"
       >
