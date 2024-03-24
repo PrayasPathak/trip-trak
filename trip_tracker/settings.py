@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Installed Apps
     "trip.apps.TripConfig",
+    # Third Party Apps
+    "crispy_forms",
+    "crispy_tailwind",
 ]
 
 MIDDLEWARE = [
@@ -128,3 +131,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Redirecting user after logging in
 LOGIN_REDIRECT_URL = "trip-list"
+
+# Crispy Tailwind Settings
+CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
+CRISPY_TEMPLATE_PACK = "tailwind"

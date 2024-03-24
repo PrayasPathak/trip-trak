@@ -22,7 +22,7 @@
                 My Trips
               </li>
             </a>
-            <a href="#">
+            <a href="{%url 'trip-create'%}">
               <li
                 class="py-2 px-3 md:px-0 hover:bg-gray-600 hover:cursor-pointer"
               >
@@ -50,7 +50,10 @@
         >
           <p class="">{{user.username}}</p>
           <hr class="my-2" />
-          <a class="underline" href="{% url 'logout' %}"> Logout </a>
+          <form action="{%url 'logout'%}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="underline">Logout</button>
+          </form>
         </div>
       </div>
       <div class="w-full md:w-full p-10 overflow-auto">
